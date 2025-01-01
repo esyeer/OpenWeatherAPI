@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get 5 Days Weather Forecast</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e817c552-8635-4e09-9778-82cd3078c63e</testCaseGuid>
+</TestCaseEntity>
