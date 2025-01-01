@@ -40,25 +40,23 @@ requestObject.setRestUrl(baseURL + "?lat=${GlobalVariable.lat}&lon=${GlobalVaria
 def response = WS.sendRequest(requestObject)
 
 //verify the status code
-WS.verifyResponseStatusCode(response, 200)
-
-assertThat(response.getStatusCode()).isEqualTo(200)
+assert response.getStatusCode() == 200 : "StatusCode expected '200' but was '${response.getStatusCode()}'"
 
 // Parse response
 def jsonSlurper = new JsonSlurper()
 def jsonResponse = jsonSlurper.parseText(response.getResponseText())
 
 //assert city name
-assert jsonResponse.city.name == 'Rawa Barat'
+assert jsonResponse.city.name == 'Rawa Barat' : "City name expected 'Rawa Barat' but was '${jsonResponse.city.name}'"
 
 //assert country
-assert jsonResponse.city.country == 'ID'
+assert jsonResponse.city.country == 'ID' : "Country expected 'ID' but was '${jsonResponse.city.country}'"
 
 //assert latitude
-assert jsonResponse.city.coord.lat == -6.2838
+assert jsonResponse.city.coord.lat == -6.2838 : "Latitude expected '-6.2838' but was '${jsonResponse.city.coord.lat}'"
 
 //assert Longitude
-assert jsonResponse.city.coord.lon == 106.8049
+assert jsonResponse.city.coord.lon == 106.8049 : "Longitude expected '106.8049' but was '${jsonResponse.city.coord.lon}'"
 
 //assert list data
 assert jsonResponse.list != null : "Weather list is null"

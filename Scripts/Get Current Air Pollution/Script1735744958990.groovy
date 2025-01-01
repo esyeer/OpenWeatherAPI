@@ -38,19 +38,17 @@ requestObject.setRestUrl(baseURL + "?lat=${GlobalVariable.lat}&lon=${GlobalVaria
 def response = WS.sendRequest(requestObject)
 
 //assert the response status
-WS.verifyResponseStatusCode(response, 200)
-
-assertThat(response.getStatusCode()).isEqualTo(200)
+assert response.getStatusCode() == 200 : "StatusCode expected '200' but was '${response.getStatusCode()}'"
 
 // Parse response
 def jsonSlurper = new JsonSlurper()
 def jsonResponse = jsonSlurper.parseText(response.getResponseText())
 
 //assert latitude
-assert jsonResponse.coord.lat == -6.2838
+assert jsonResponse.coord.lat == -6.2838 : "Latitude expected '-6.2838' but was '${jsonResponse.coord.lat}'"
 
 //assert Longitude
-assert jsonResponse.coord.lon == 106.8049
+assert jsonResponse.coord.lon == 106.8049 : "Longitude expected '106.8049' but was '${jsonResponse.coord.lon}'"
 
 //assert list contains data
 assert jsonResponse.list != null : "Air pollution list is null"
