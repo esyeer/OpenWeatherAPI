@@ -53,21 +53,17 @@ Berikut adalah struktur dasar proyek:
 ```
 /project-name
 │
-
 ├── /Test Cases
 │   ├── Get5DaysForecastTest
 │   └── GetCurrentAirPollutionTest
 │
-
 ├── /Test Suites
 │   ├── AllTestsSuite
 │
-
 ├── /Object Repository
 │   ├── WeatherForecastPage
 │   ├── AirPollutionPage
 │
-
 │
 └── /Reports
     ├── HTML Reports
