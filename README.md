@@ -1,4 +1,4 @@
-```markdown
+
 # Test Automation API for OpenWeatherMap
 
 Proyek ini adalah test automation API yang dirancang untuk menguji endpoint dari **OpenWeatherMap API**, khususnya untuk mendapatkan **5 Days Weather Forecast** dan **Current Air Pollution**. Proyek ini menggunakan **Katalon Studio** sebagai alat untuk membuat dan menjalankan test case.
